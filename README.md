@@ -5,5 +5,5 @@ This repository contains tools and some data to create conformal Carter-Penrose 
 
 The contained material is the following: 
 * Mathematica notebook to create the diagrams. 
-* Zipped data (required for some plots) in folder *data*. Please unzip before evaluating the Mathematica notebook. 
+* Compressed data (required for some plots) in folder *data*. Please unzip before evaluating the Mathematica notebook. 
 * Gif animations of dynamical spacetimes in folder *gifs*. 
