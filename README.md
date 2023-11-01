@@ -1,7 +1,7 @@
-# Hyperbolidal Carter-Penrose diagrams
+# Hyperboloidal Carter-Penrose diagrams
 by Alex Vano-Vinuales, October 2023. 
 
-This repository contains tools and some data to create conformal Carter-Penrose diagrams, especially oriented to the representation of hyperboloidal slices in the Schwazschild geometry. It provides supplementary material to paper [arXiv: 23XX.XXXXX [gr-qc]](website). 
+This repository contains tools and some data to create conformal Carter-Penrose diagrams, especially oriented to the representation of hyperboloidal slices in the Schwazschild geometry. It provides supplementary material for paper [arXiv: 23XX.XXXXX [gr-qc]](website). 
 
 The contained material is the following: 
 * Mathematica notebook to create the diagrams. 
