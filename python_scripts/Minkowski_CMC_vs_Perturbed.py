@@ -63,9 +63,9 @@ for t0 in time:
     R = (V - U)/2
 
     if first_iteration1:
-        plt.plot(R,T, color='orange', linewidth=1.3, label='CMC Minkowski')
+        plt.plot(R,T, color='purple', linewidth=1.3, label='CMC Minkowski')
         first_iteration1 = False
-    else: plt.plot(R,T, color='orange', linewidth=1.3)
+    else: plt.plot(R,T, color='purple', linewidth=1.3)
 
 # Perturbed
 def hpnumcomp(r):
@@ -98,9 +98,9 @@ for tp in time:
     R = (V - U)/2
 
     if first_iteration2:
-        #plt.plot(R,T,'k-', linewidth=1.3, label='perturbed')
+        plt.plot(R,T,'k-', linewidth=1.3, label='perturbed')
         first_iteration2 = False
-    #else: plt.plot(R,T,'k-', linewidth=1.3)
+    else: plt.plot(R,T,'k-', linewidth=1.3)
 
 # Create the diagram
 plt.plot([0,(np.pi)/2], [(np.pi)/2, 0], 'k-', linewidth=2)
@@ -118,7 +118,7 @@ plt.text((np.pi)/4+0.1, -(np.pi)/4-0.3, r"$ \scri ^{-}$", fontsize = 18)
 plt.text((np.pi)/2+0.1, -0.1, r"$ i ^{0}$", fontsize = 18)
 plt.text(0, -(np.pi)/2-0.3, r"$ i ^{-}$", fontsize = 18)
 plt.text(0, (np.pi)/2+0.1, r"$ i ^{+}$", fontsize = 18)
-plt.legend(frameon=False, loc='lower right', bbox_to_anchor=(0.1, 0), fontsize=12)
+plt.legend(frameon=False, loc='lower right', fontsize=12)
 file_path = os.path.join('C:\\Users\\jacma\\OneDrive - Universidade de Lisboa\\Desktop\\PIC\\Report\\Images', 'Mink_CMC_vs_perturbed.pdf')
 plt.savefig(file_path)
 plt.show()
@@ -169,3 +169,4 @@ plt.legend(frameon=False, loc='lower right', fontsize=12)
 file_path = os.path.join('C:\\Users\\jacma\\OneDrive - Universidade de Lisboa\\Desktop\\PIC\\Report\\Images', 'Mink_various_Kcmc.pdf')
 plt.savefig(file_path)
 plt.show()
+

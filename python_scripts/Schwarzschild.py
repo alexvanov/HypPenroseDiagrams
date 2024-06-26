@@ -37,7 +37,7 @@ for r in list_radius_in:
     R_in = (U_in + V_in)/2
 
     if first_iteration1:
-        plt.plot(R_in,T_in,'g--', linewidth=1.3, label=r'$\tilde{r} \, \text{const}$')
+        plt.plot(R_in,T_in,'g--', linewidth=1.3, label=r'$\tilde{r} = \text{const}$')
         first_iteration1 = False
     else:
        plt.plot(R_in,T_in,'g--', linewidth=1.3)
@@ -54,7 +54,7 @@ for t in list_time_in:
     R_in = (U_in + V_in)/2
 
     if first_iteration2:
-        plt.plot(R_in,T_in,'g-', linewidth=1.3, label=r'$\tilde{t} \, \text{const}$')
+        plt.plot(R_in,T_in,'g-', linewidth=1.3, label=r'$\tilde{t} = \text{const}$')
         first_iteration2 = False
     else:
        plt.plot(R_in,T_in,'g-', linewidth=1.3)

@@ -137,12 +137,13 @@ def beta_M(r):
 ################################################
 
 'Check that aconf_final and omega coincide at r=1'
-
 '''
 r1 = np.arange(0, 1, 0.00001)
 plt.plot(r1, omega(r1), color='green', label=r'$\Omega(r)$')
 plt.plot(r1, aconf_final(r1), color='blue', label=r'$\bar{\Omega}(r)$')
+plt.plot(r1, r1 / 1.91, color='pink', label=r'$\frac{r}{\Tilde{r}_{trum}}$')
 plt.axhline(0, color='black', linewidth=0.5)
+plt.ylim([0, 0.20])
 plt.xlabel(r"$r$")
 plt.yticks([0, 0.05, 0.10, 0.15])
 plt.legend(frameon=False, loc='upper right', fontsize=12)

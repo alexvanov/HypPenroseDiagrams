@@ -35,9 +35,9 @@ for t in list_time:
     R = (V - U)/2
 
     if first_iteration1:
-        plt.plot(R,T,color='green', linewidth=1.3, label=r'$\tilde{t} = \text{const}$')
+        plt.plot(R,T,color='red', linewidth=1.3, label=r'$\tilde{t} = \text{const}$')
         first_iteration1 = False
-    else: plt.plot(R,T,color='green', linewidth=1.3)
+    else: plt.plot(R,T,color='red', linewidth=1.3)
 
 t1 = np.arange(-50, 50, 0.001)
 for r in list_radius:
@@ -51,9 +51,9 @@ for r in list_radius:
     R = (V - U)/2
     
     if first_iteration2:
-        plt.plot(R,T,color='green', linestyle='--', linewidth=1.3, label=r'$\tilde{r} = \text{const}$')
+        plt.plot(R,T,color='red', linestyle='--', linewidth=1.3, label=r'$\tilde{r} = \text{const}$')
         first_iteration2 = False
-    else: plt.plot(R,T,color='green', linestyle='--', linewidth=1.3)
+    else: plt.plot(R,T,color='red', linestyle='--', linewidth=1.3)
 
 # Create the diagram
 plt.plot([0,(np.pi)/2], [(np.pi)/2, 0], 'k-', linewidth=2)

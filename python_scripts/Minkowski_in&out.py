@@ -37,10 +37,10 @@ for v in list_lightin:
     R_filtered = R[filter]
 
     if first_iteration1:
-        plt.plot(R_filtered, T_filtered, linestyle='dotted', color='orange', linewidth=1.3, label='light in')
+        plt.plot(R_filtered, T_filtered, linestyle='dotted', color='blue', linewidth=1.3, label=r'$\Tilde{V}$ = const')
         first_iteration1 = False
     else:
-       plt.plot(R_filtered, T_filtered, linestyle='dotted', color='orange', linewidth=1.3)
+       plt.plot(R_filtered, T_filtered, linestyle='dotted', color='blue', linewidth=1.3)
 
 v1 = np.arange(-50, 50, 0.001)
 for u1 in list_lightout:
@@ -56,10 +56,10 @@ for u1 in list_lightout:
     R_filtered = R[filter]
 
     if first_iteration2:
-        plt.plot(R_filtered, T_filtered, color='orange', linewidth=1.3, label='light out')
+        plt.plot(R_filtered, T_filtered, color='blue', linewidth=1.3, label=r'$\Tilde{U}$ = const')
         first_iteration2 = False
     else:
-        plt.plot(R_filtered, T_filtered, color='orange', linewidth=1.3)
+        plt.plot(R_filtered, T_filtered, color='blue', linewidth=1.3)
 
 # Create the diagram
 plt.plot([0,(np.pi)/2], [(np.pi)/2, 0], 'k-', linewidth=2)

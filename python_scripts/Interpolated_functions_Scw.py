@@ -107,12 +107,29 @@ def omega(r):
 
 def aconf_num(r):
     return np.sqrt(chi_num(r)/gthth_num(r))*omega(r)
+
 '''
 r = np.arange(0, 1, 0.001)
-plt.plot(r,alpha_scw(r))
-plt.plot(r,beta_scw(r))
-plt.plot(r,chi_scw(r))
-plt.plot(r,grr_scw(r))
-plt.plot(r,gthth_scw(r))
+plt.plot(r,alpha_num(r))
+plt.plot(r,beta_num(r))
+plt.plot(r,chi_num(r))
+plt.plot(r,grr_num(r))
+plt.plot(r,gthth_num(r))
 plt.show()
 '''
+
+# Calculate c
+
+def num_derivative(f, x, h=1e-7):
+    return (f(x+h)-f(x-h))/(2*h)
+
+def expression(r):
+    numerator = grr_num(r) / chi_num(r)
+    denominator = (1/alpha_num(r)**2)*(omega(r)**2/aconf_num(r)**2*(aconf_num(r)-r*num_derivative(aconf_num,r)))**2
+    return numerator/denominator
+
+const = expression(0.5)
+c = np.sqrt(const)
+print(f"Value of c taken to be c = {c} -- It must be 1 if CMC data is being used.")
+
+

@@ -189,8 +189,8 @@ def hccomp(r):
 
 # Plots
 r = np.arange(0.0001, rcompmax, 0.0001)
-plt.plot(r, omega(r)*minkheight(r/omega(r)), color='blue', label=r'$\Omega h$ \text{(Mink)}')
-plt.plot(r, omega(r)*hccomp(r), color='green', label=r'$\Omega h$ \text{(Schw)}')
+plt.plot(r, omega(r)*minkheight(r/omega(r)), color='purple', linestyle='-.', label=r'$\Omega h$ \text{(Mink)}')
+plt.plot(r, omega(r)*hccomp(r), color='blue', label=r'$\Omega h$ \text{(Schw)}')
 plt.plot(r, omega(r)*fks(r/aconf_c(r)), color='black', linestyle='--', label=r'$\Omega f$ \text{(Schw)}')
 plt.plot(r, omega(r)*dhccomp(r), color='black', label=r'$\Omega \Delta h$ \text{(Schw)}')
 plt.axhline(0, color='black', linewidth=0.5)

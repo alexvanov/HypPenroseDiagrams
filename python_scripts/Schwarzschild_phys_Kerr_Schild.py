@@ -58,7 +58,7 @@ for r in list_radius_in:
         V_in = np.arctan(u_in - v_in)
         T_in = (U_in - V_in)/2
         R_in = (U_in + V_in)/2
-        plt.plot(R_in, T_in, color='blue', linestyle='--', linewidth=3, label=r'$\Tilde{r}_{trum}$')
+        plt.plot(R_in, T_in, color='orange', linestyle='--', linewidth=3, label=r'$\Tilde{r}_{trum}$')
 
     else:
         u_in = np.sqrt(1-r1/(2*Mass))*np.exp(r1/(4*Mass))*np.sinh(tphys/(4*Mass))
@@ -69,7 +69,7 @@ for r in list_radius_in:
 
         T_in = (U_in - V_in)/2
         R_in = (U_in + V_in)/2
-        plt.plot(R_in, T_in, color='red', linestyle='--', linewidth=1.3)
+        plt.plot(R_in, T_in, color='orange', linestyle='--', linewidth=1.3)
 
 for r in list_radius_out:
     r1= r/aconf_final(r)
@@ -85,10 +85,10 @@ for r in list_radius_out:
     valid_T = (T_out > -np.pi/4) & (T_out < np.pi/4)
 
     if first_iteration1:
-        plt.plot(R_out[valid_T], T_out[valid_T], color='red', linestyle='--', linewidth=1.3, label=r'$\tilde{r} = \text{const}$')
+        plt.plot(R_out[valid_T], T_out[valid_T], color='orange', linestyle='--', linewidth=1.3, label=r'$\tilde{r} = \text{const}$')
         first_iteration1 = False
     else:
-       plt.plot(R_out[valid_T], T_out[valid_T], color='red', linestyle='--', linewidth=1.3)
+       plt.plot(R_out[valid_T], T_out[valid_T], color='orange', linestyle='--', linewidth=1.3)
 
 # Find the value for r_trumpet
 '''
@@ -236,10 +236,10 @@ for t in list_time:
     R_in = (U_in + V_in)/2
 
     if first_iteration2:
-        plt.plot(R_in, T_in, color='red', linewidth=1.3, label=r'$t = \text{const}$ for $h$')
+        plt.plot(R_in, T_in, color='orange', linewidth=1.3, label=r'$t = \text{const}$ for $h$')
         first_iteration2 = False
     else:
-       plt.plot(R_in, T_in, color='red', linewidth=1.3)
+       plt.plot(R_in, T_in, color='orange', linewidth=1.3)
 
 rphys_out = np.arange(rphyshornum, 20, 0.00001)
 for t in list_time:
@@ -257,7 +257,7 @@ for t in list_time:
 
     valid_T = (T_out > -np.pi/4) & (T_out < np.pi/4)
 
-    plt.plot(R_out[valid_T], T_out[valid_T], color='red', linewidth=1.3)
+    plt.plot(R_out[valid_T], T_out[valid_T], color='orange', linewidth=1.3)
 
 
 'Construction integrating for Delta_h = h - f  in physical Kerr-Schild coordinates (only for closed-form expressions)'
@@ -328,13 +328,13 @@ plt.ylim(-12,2)
 plt.show()
 '''
 
-# h(r), f(r), delta_h(r)
+# h(r), f(r), delta_h(r) 
 '''
 r7 = np.arange(rphystrum+0.001, 5, 0.000001)
 r7_2 = np.arange(0, 5, 0.001)
 plt.plot(r7, hpcomp(r7)+12, color='orange', label=r'$h(\tilde{r})$')
-plt.plot(r7, fks(r7), color='black', linestyle='--', label=r'$\Delta h(\tilde{r})$')
-plt.plot(r7, dhpcomp(r7)+12, color='black', label=r'$f(\tilde{r})$')
+plt.plot(r7, fks(r7), color='black', linestyle='--', label=r'$f(\tilde{r})$')
+plt.plot(r7, dhpcomp(r7)+12, color='black', label=r'$\Delta h(\tilde{r})$')
 plt.axhline(0, color='black', linewidth=0.5)
 plt.ylim(-30,20)
 plt.legend()
