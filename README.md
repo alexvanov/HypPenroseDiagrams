@@ -5,6 +5,6 @@ This repository contains tools and some data to create conformal Carter-Penrose 
 
 The contained material is the following: 
 * Mathematica notebook to create the diagrams. 
-* Python scripts to create the diagrams, kindly provided by André Matias [joao.c.matias@tecnico.ulisboa.pt](mailto:joao.c.matias@tecnico.ulisboa.pt) -- work in progress.
+* Python scripts to create the diagrams, kindly provided by André Matias [joao.c.matias@tecnico.ulisboa.pt](mailto:joao.c.matias@tecnico.ulisboa.pt).
 * Compressed data (required for some plots) in folder *data*. Please unzip before evaluating the Mathematica notebook. 
 * Gif animations of dynamical spacetimes in folder *gifs*. 
